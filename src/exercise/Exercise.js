@@ -8,10 +8,10 @@ function Exercise (){
 
     // 2c
  const [num, setNum] = useState(1);
- const 
+
 
 //  2d
-function addNum = setNum(num + 1)
+const addNum = () => setNum(num + 1);
 
  //1c
     return (
@@ -19,13 +19,10 @@ function addNum = setNum(num + 1)
         {/* 1e */}
         <button onClick={()=> alert(`Congrats! You have clicked the button.`)}>CLICK HERE</button>
         {/* 2b */}
-        <button>STATE</button>
-
-
+        <button onClick={addNum}>STATE</button>
+        <h1>{num}</h1>
     </div>
-)
-
-
+);
 }
 //1b
 export default Exercise;
