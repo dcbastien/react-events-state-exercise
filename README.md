@@ -1,70 +1,60 @@
-# Getting Started with Create React App
+React Event and State Exercise...
+Important: Remember to stop your React App from running AFTER you complete the exercise. You can do this by opening the terminal session that the React App is running on and pressing (Control + C) or you can click the trash can icon to completely end that terminal session.
+A. Open terminal, cd into the “ReactApps” folder and run the following command…
+npx create-react-app react-events-state-exercise
+B. After the React App has been created and the “Happy Hacking!” message is seen, cd into the “react-events-state-exercise” folder
+C. Run the following command inside the “react-events-state-exercise” folder…
+npm start
+D. You should now see the React app default page displaying in the browser (It has the cool spinning React logo)
+E. Open the App.js file (NOTE: This is inside the “src” folder)
+F. Remove both imports at the top of the App.js file. Also, remove everything in the parentheses of the RETURN in the App function component
+NOTE: You will need to open a second terminal session to complete the next two steps
+G. Create a new folder/directory in the “src” folder called “exercise”
+H. Inside the exercise folder create an Exercise.js file
+I. Open the Exercise.js file and complete the following...
+1a. Create a function component called Exercise
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+1b. Add the export line at the bottom of the file
 
-## Available Scripts
+1c. Inside the Exercise function component, use the RETURN keyword with parentheses to have the Exercise function component return a button element and set the text inside of it to "CLICK HERE"
 
-In the project directory, you can run:
+1d. Open the App.js file and add the necessary import line at the top of the file that allows the Exercise component to be used in the App.js file. Also, use the Exercise component in the return for the App component.
 
-### `npm start`
+1e. Use the "onClick" React event listener on the button and set the value for the "onClick" React event listener to a function that alerts the user with the following message when the button is clicked…
+"Congrats! You have clicked the button."
+(HINT: Remember to use brackets {})
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+2a. Add the necessary import line at the top of the Exercise.js file that allows for the useState function to be used in this file/component
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+2b. Create another button element below the "CLICK HERE" button in the Exercise function component set the text inside of it to "STATE"
 
-### `npm test`
+2c. Above the return keyword in the Exercise function component, use the "useState" function with the number 1 passed in as an argument. Also, use destructuring to set the values of the array that are returned from the useState function to the following const variable names…
+First name: "num"
+Second name: "setNum"
+(NOTE: Remember that the useState function returns an array of two items. First is the value that was passed into the useState function and the second is a function.)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2d. Below useState function, create a function called addNum that adds one to the value of the num variable and sets that as the new state value for the num variable by using the setNum function inside of the addNum function
 
-### `npm run build`
+2e. Use the "onClick" React event listener on the "STATE" button and set the value for the "onClick" React event listener to the addNum function (HINT: Remember to use brackets {})
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2f. Below the "STATE" button, create another h1 with the num variable set as the content/text inside the h1 (HINT: Remember to use brackets {}) (NOTE: If is done correctly, then in Chrome the value of the h1 should start at 1 and go up by 1 every time the "STATE" button is clicked)
+Important: Remember to stop your React App from running after you complete the exercise. You can do this by opening the terminal session that the React App is running on and pressing (Control + C) or you can click the trash can icon to completely end that terminal session.
+BONUS
+J. Create a new folder/directory in the “src” folder called “bonus”
+K. Inside the bonus folder create a Bonus.js file
+L. Open the Bonus.js file and complete the following...
+3a. Import the useState function at the top of the file
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3b. Create a function component called Bonus.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3c. Add the export line at the bottom of the file
 
-### `npm run eject`
+3d. Inside the Bonus function component create a const variable called "letters" with the following array set as the value ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+3e. Inside the Bonus function component use the return keyword to have it return an h1 and a button (Set the text for the button to "NEXT LETTER")
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3f. Using State as well as an onClick Event, have the letter A display in the h1 when the page loads and change to the next letter in the alphabet each time the button is pressed.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+3g. Open the App.js file and create the Bonus import below the Exercise import at the top of the file
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+3h. Inside the return for the App component, pass in the Bonus component below the Exercise component so it will render to the browser
